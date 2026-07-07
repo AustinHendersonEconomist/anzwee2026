@@ -1,0 +1,11 @@
+# Local tooling / editor
+.claude/
+Thumbs.db
+.DS_Store
+
+# Local working docs — not part of the published website
+*.docx
+*.gs
+unpacked_docx/
+RE_ ANZWEE conference/
+*Brand Guide*.html
