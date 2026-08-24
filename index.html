@@ -73,9 +73,7 @@
       padding: 56px 24px 64px;
       background:
         linear-gradient(135deg, rgba(6,13,135,0.88) 0%, rgba(4,6,61,0.82) 55%, rgba(6,13,135,0.78) 100%),
-        /* TODO: swap for an Otago Flickr hero image (ideally ~2000px wide, landscape).
-           Interim: the Otago Clocktower photo already in the repo. */
-        url('images/clocktowernew.jpg') center 35%/cover no-repeat;
+        url('images/otago-hero.jpg') center 42%/cover no-repeat;
     }
     .hero-inner { max-width: 980px; margin: 0 auto; position: relative; }
     .hero-logo { height: 48px; width: auto; margin-bottom: 30px; opacity: 0.96; }
@@ -158,6 +156,14 @@
     .topic-tag { background: var(--sky-tint); color: var(--otago-blue); font-size: 0.85rem; font-weight: 600; padding: 7px 14px; border-radius: 20px; border: 1px solid #C4D9F4; }
 
     .organisers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+
+    /* ── Dunedin gallery ── */
+    .places-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 34px; }
+    .place-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 22px rgba(6,13,135,0.12); display: flex; flex-direction: column; }
+    .place-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+    .place-body { padding: 16px 20px 20px; }
+    .place-name { font-family: var(--serif-font); font-size: 1.12rem; font-weight: 600; color: var(--otago-blue); margin-bottom: 6px; }
+    .place-text { font-size: 0.9rem; color: var(--mid-grey); line-height: 1.55; }
     .organiser-card { background: var(--white); border-radius: 8px; padding: 24px; box-shadow: 0 2px 10px rgba(6,13,135,0.08); border-bottom: 3px solid var(--otago-gold); }
     .organiser-name { font-weight: 700; font-size: 1.05rem; color: var(--otago-blue); margin-bottom: 4px; }
     .organiser-role { font-size: 0.85rem; color: var(--mid-grey); }
@@ -176,6 +182,8 @@
     .footer-contact a { color: var(--otago-gold); text-decoration: none; }
     .footer-contact a:hover { text-decoration: underline; }
     .footer-bottom { max-width: 980px; margin: 36px auto 0; padding: 22px 0 28px; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.78rem; color: rgba(255,255,255,0.5); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom .credits { flex: 1 1 460px; max-width: 100%; line-height: 1.65; text-align: right; }
+    @media (max-width: 660px) { .footer-bottom .credits { text-align: left; } }
     .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
     .footer-bottom a:hover { color: rgba(255,255,255,0.85); }
 
@@ -193,6 +201,7 @@
       <li><a href="#dates">Key Dates</a></li>
       <li><a href="#programme">Programme</a></li>
       <li><a href="#venue">Venue</a></li>
+      <li><a href="#dunedin">Dunedin</a></li>
       <li><a href="#submit">Submit</a></li>
       <li><a href="#register" class="nav-cta">Register</a></li>
     </ul>
@@ -273,13 +282,6 @@
       of Economics in the University of Otago's Otago Business School. We welcome submissions from
       researchers at all career stages working in experimental and behavioural economics.
     </p>
-    <!-- TODO: Dunedin / Otago campus image from the University Flickr gallery goes here.
-         Landscape, ~1400x820. Restore the <figure> block below once the file is added:
-    <figure class="figure">
-      <img src="images/otago-about.jpg" alt="" loading="lazy">
-      <figcaption class="figure-caption">The University of Otago campus — the setting for ANZWEE 2026.</figcaption>
-    </figure>
-    -->
   </div>
 </section>
 
@@ -362,12 +364,49 @@
           Queenstown to the University of Otago's Dunedin campus. Information on recommended
           accommodation and travel options in Dunedin will be added here once dates are confirmed.</div>
       </div>
-      <!-- TODO: Otago Business School / campus image from the University Flickr gallery goes here.
-           Landscape, ~1400x800. Restore the <figure> block below once the file is added:
       <figure class="figure" style="margin-top:0;">
-        <img src="images/otago-venue.jpg" alt="" loading="lazy">
+        <img src="images/otago-venue.jpg" alt="The University of Otago Registry clocktower building seen across the campus rose gardens in summer" loading="lazy">
       </figure>
-      -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DISCOVER DUNEDIN ═══ -->
+<section class="section" id="dunedin">
+  <div class="container">
+    <p class="section-label">Beyond the Workshop</p>
+    <h2 class="section-title">Discover Dunedin</h2>
+    <div class="divider"></div>
+    <p class="section-body">
+      Dunedin — Ōtepoti — sits at the head of a long harbour on New Zealand's southeast coast, with the
+      University at its centre and wild coastline a short drive away. If you are able to extend your
+      stay, there is a great deal worth seeing within half an hour of campus.
+    </p>
+    <div class="places-grid">
+      <div class="place-card">
+        <img src="images/dunedin-botanic-garden.jpg" alt="The pond and surrounding trees at Dunedin Botanic Garden on a sunny day" loading="lazy">
+        <div class="place-body">
+          <div class="place-name">Dunedin Botanic Garden</div>
+          <p class="place-text">New Zealand's oldest botanic garden, founded in 1863, and a ten-minute walk
+            from campus. Twenty-eight hectares of rose gardens, native bush, an aviary and a rhododendron dell.</p>
+        </div>
+      </div>
+      <div class="place-card">
+        <img src="images/otago-peninsula.jpg" alt="Steep cliffs and breaking surf along the coastline at Sandymount, Otago Peninsula" loading="lazy">
+        <div class="place-body">
+          <div class="place-name">Otago Peninsula</div>
+          <p class="place-text">A volcanic finger of land reaching into the Pacific, known for albatross,
+            sea lions and yellow-eyed penguins, plus dramatic clifftop walks at Sandymount and Lovers Leap.</p>
+        </div>
+      </div>
+      <div class="place-card">
+        <img src="images/otago-harbour.jpg" alt="View across Otago Harbour towards the Otago Peninsula from the hills above Port Chalmers" loading="lazy">
+        <div class="place-body">
+          <div class="place-name">Otago Harbour</div>
+          <p class="place-text">The harbour runs 20&nbsp;km from the city out to Taiaroa Head. The road along
+            either shore makes for a memorable drive, with Port Chalmers and its cafés partway along.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -502,7 +541,14 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 University of Otago. All rights reserved.</span>
-    <span>Photos: Otago Clocktower via <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> (public domain)</span>
+    <span class="credits">Photos: campus images courtesy of the University of Otago ·
+      Otago Clocktower via <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> (public domain) ·
+      <a href="https://commons.wikimedia.org/wiki/File:Dunedin_Botanic_Garden_09.jpg" target="_blank" rel="noopener">Dunedin Botanic Garden</a>
+      by Krzysztof Golik, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Coastline_at_Sandymount_NZ_2016.jpg" target="_blank" rel="noopener">Coastline at Sandymount</a>
+      by Tomas Sobek, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:From_Mt_Cutten-_Sawyers_Bay_and_Port_Chalmers,_then_across_Otago_Harbour_to_Otago_Peninsula_(25517408056).jpg" target="_blank" rel="noopener">Otago Harbour from Mt Cutten</a>
+      by Samuel Mann, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></span>
   </div>
 </footer>
 
