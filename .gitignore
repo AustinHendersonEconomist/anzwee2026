@@ -9,3 +9,7 @@ Thumbs.db
 unpacked_docx/
 RE_ ANZWEE conference/
 *Brand Guide*.html
+
+# Form exports contain personal data - never publish
+*.xlsx
+*.csv
